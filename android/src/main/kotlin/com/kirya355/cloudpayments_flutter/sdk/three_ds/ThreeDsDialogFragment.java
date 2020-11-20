@@ -1,4 +1,4 @@
-package android.src.main.kotlin.com.shushper.cloudpayments.sdk.three_ds;
+package android.src.main.kotlin.com.kirya355.cloudpayments_flutter.sdk.three_ds;
 
 import android.app.Activity;
 import android.content.Context;

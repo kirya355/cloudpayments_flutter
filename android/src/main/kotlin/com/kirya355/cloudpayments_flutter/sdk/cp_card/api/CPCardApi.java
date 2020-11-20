@@ -1,4 +1,4 @@
-package android.src.main.kotlin.com.shushper.cloudpayments.sdk.cp_card.api;
+package android.src.main.kotlin.com.kirya355.cloudpayments_flutter.sdk.cp_card.api;
 
 import android.content.Context;
 
