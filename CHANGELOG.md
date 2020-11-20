@@ -1,3 +1,7 @@
+## 0.1.2
+* Bug fixed
+
+
 ## 0.1.1
 * Update iOS-sdk.
 
