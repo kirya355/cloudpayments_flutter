@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "BinInfo.h"
+
+@class BinInfo;
 
 @protocol CPCardApiDelegate
 @required

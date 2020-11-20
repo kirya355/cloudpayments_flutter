@@ -7,12 +7,11 @@ NSString * const POST_BACK_URL = @"https://demo.cloudpayments.ru/WebFormPost/Get
 
 @implementation D3DS
 
--(void) make3DSPaymentWithUIViewController: (UIViewController *) viewController andD3DSDelegate:(id <D3DSDelegate>) d3dsDelegate andAcsURLString: (NSString *) acsUrlString andPaReqString: (NSString *) paReqString andTransactionIdString: (NSString *) transactionIdString {
+-(void) make3DSPaymentWithUIViewController: (UIViewController<D3DSDelegate> *) viewController andAcsURLString: (NSString *) acsUrlString andPaReqString: (NSString *) paReqString andTransactionIdString: (NSString *) transactionIdString {
     
     /*[request setValue:@"application/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];*/
     
-    controller = viewController;
-    delegate = d3dsDelegate;
+    viewControllerD3DSDelegate = viewController;
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString: acsUrlString]];
     [request setHTTPMethod: @"POST"];
@@ -38,15 +37,15 @@ NSString * const POST_BACK_URL = @"https://demo.cloudpayments.ru/WebFormPost/Get
     if (([response statusCode] == 200) || ([response statusCode] == 201)) {
         
         WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
-        webView = [[WKWebView alloc] initWithFrame:controller.view.frame configuration:configuration];
+        webView = [[WKWebView alloc] initWithFrame:viewControllerD3DSDelegate.view.frame configuration:configuration];
         [webView setNavigationDelegate: self];
-        [controller.view addSubview:webView];
+        [viewControllerD3DSDelegate.view addSubview:webView];
         
         [webView loadData:responseData MIMEType:[response MIMEType] characterEncodingName:[response textEncodingName] baseURL:[response URL]];
       
     } else {
         NSString *messageString = [NSString stringWithFormat:@"Unable to load 3DS autorization page.\nStatus code: %d", (unsigned int)[response statusCode]];
-        [delegate authorizationFailedWithHtml:messageString];
+        [viewControllerD3DSDelegate authorizationFailedWithHtml:messageString];
     }
 }
 
@@ -70,11 +69,11 @@ NSString * const POST_BACK_URL = @"https://demo.cloudpayments.ru/WebFormPost/Get
                 }
                 str = [str substringToIndex:endRange.location + 1];
                 NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[str dataUsingEncoding:NSUTF8StringEncoding] options:0 error:NULL];
-                [sself->delegate authorizationCompletedWithMD:dict[@"MD"] andPares:dict[@"PaRes"]];
+                [sself->viewControllerD3DSDelegate authorizationCompletedWithMD:dict[@"MD"] andPares:dict[@"PaRes"]];
                 [webView removeFromSuperview];
                 return;
             } while(NO);
-            [sself->delegate authorizationFailedWithHtml:str];
+            [sself->viewControllerD3DSDelegate authorizationFailedWithHtml:str];
             [webView removeFromSuperview];
         }];
     } 
