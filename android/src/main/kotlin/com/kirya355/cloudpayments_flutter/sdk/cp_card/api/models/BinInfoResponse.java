@@ -1,4 +1,4 @@
-package android.src.main.kotlin.com.kirya355.cloudpayments_flutter.sdk.cp_card.api.models;
+package com.kirya355.cloudpayments_flutter.sdk.cp_card.api.models;
 
 import androidx.annotation.Nullable;
 

@@ -1,4 +1,4 @@
-package android.src.main.kotlin.com.kirya355.cloudpayments_flutter.sdk.three_ds;
+package com.kirya355.cloudpayments_flutter.sdk.three_ds;
 
 import android.app.Activity;
 import android.content.Context;
@@ -18,7 +18,7 @@ import androidx.fragment.app.DialogFragment;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.shushper.cloudpayments.R;
+import com.kirya355.cloudpayments_flutter.R;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

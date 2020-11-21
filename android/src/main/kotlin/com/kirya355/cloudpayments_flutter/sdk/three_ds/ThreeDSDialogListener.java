@@ -1,4 +1,4 @@
-package android.src.main.kotlin.com.kirya355.cloudpayments_flutter.sdk.three_ds;
+package com.kirya355.cloudpayments_flutter.sdk.three_ds;
 
 public interface ThreeDSDialogListener {
 

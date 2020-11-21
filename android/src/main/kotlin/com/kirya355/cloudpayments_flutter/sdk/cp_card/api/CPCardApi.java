@@ -1,4 +1,4 @@
-package android.src.main.kotlin.com.kirya355.cloudpayments_flutter.sdk.cp_card.api;
+package com.kirya355.cloudpayments_flutter.sdk.cp_card.api;
 
 import android.content.Context;
 
@@ -10,8 +10,8 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.shushper.cloudpayments.sdk.cp_card.api.models.BinInfo;
-import com.shushper.cloudpayments.sdk.cp_card.api.models.BinInfoResponse;
+import com.kirya355.cloudpayments_flutter.sdk.cp_card.api.models.BinInfo;
+import com.kirya355.cloudpayments_flutter.sdk.cp_card.api.models.BinInfoResponse;
 
 
 public class CPCardApi {

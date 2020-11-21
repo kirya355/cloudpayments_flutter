@@ -1,4 +1,4 @@
-package android.src.main.kotlin.com.kirya355.cloudpayments_flutter.sdk.cp_card;
+package com.kirya355.cloudpayments_flutter.sdk.cp_card;
 
 public class CPCardType {
 

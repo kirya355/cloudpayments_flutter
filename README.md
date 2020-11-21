@@ -1,6 +1,7 @@
 # cloudpayments_flutter
 
-A Flutter plugin for integrating Cloudpaymanets in Android and iOS applications.
+A Flutter plugin for integrating Cloudpaymanets in Android
+and iOS (test) applications.
 
 
 
