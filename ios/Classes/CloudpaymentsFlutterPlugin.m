@@ -1,5 +1,5 @@
 #import "CloudpaymentsFlutterPlugin.h"
-#if __has_include(<cloudpayments/cloudpayments-Swift.h>)
+#if __has_include(<cloudpayments_flutter/cloudpayments_flutter-Swift.h>)
 #import <cloudpayments_flutter/cloudpayments_flutter-Swift.h>
 #else
 // Support project import fallback if the generated compatibility header
