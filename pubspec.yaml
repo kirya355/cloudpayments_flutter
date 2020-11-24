@@ -1,6 +1,6 @@
 name: cloudpayments_flutter
 description: A Flutter plugin for integrating Cloudpaymanets in Android and iOS applications.
-version: 0.1.4
+version: 0.1.5
 repository: https://github.com/kirya355/cloudpayments_flutter
 
 environment:
