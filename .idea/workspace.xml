@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e7f8872-7883-49c3-82fe-7e10c3107670" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/CloudpaymentsFlutterPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/CloudpaymentsFlutterPlugin.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/cloudpayments_flutter.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/cloudpayments_flutter.podspec" afterDir="false" />
-    </list>
+    <list default="true" id="4e7f8872-7883-49c3-82fe-7e10c3107670" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +20,7 @@
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ios/Classes" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -88,8 +84,26 @@
       <option name="project" value="LOCAL" />
       <updated>1605964832522</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="test ios">
+      <created>1606200592945</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606200592945</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -98,7 +112,8 @@
     <MESSAGE value="update ios-sdk#2" />
     <MESSAGE value="bugs fixed" />
     <MESSAGE value="Add working example" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add working example" />
+    <MESSAGE value="test ios" />
+    <option name="LAST_COMMIT_MESSAGE" value="test ios" />
   </component>
   <component name="WindowStateProjectService">
     <state x="531" y="242" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606200034347">
@@ -109,14 +124,14 @@
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state x="598" y="321" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.40.1536.824@0.40.1536.824" timestamp="1605894038663" />
-    <state x="359" y="40" key="CommitChangelistDialog2" timestamp="1605964829822">
+    <state x="359" y="40" key="CommitChangelistDialog2" timestamp="1606200591633">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state x="359" y="40" key="CommitChangelistDialog2/0.40.1536.824@0.40.1536.824" timestamp="1605964829822" />
-    <state x="549" y="207" key="FileChooserDialogImpl" timestamp="1606042764555">
+    <state x="359" y="40" key="CommitChangelistDialog2/0.40.1536.824@0.40.1536.824" timestamp="1606200591633" />
+    <state x="549" y="207" key="FileChooserDialogImpl" timestamp="1606227763241">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state x="549" y="207" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1606042764555" />
+    <state x="549" y="207" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1606227763241" />
     <state width="1491" height="536" key="GridCell.Tab.0.bottom" timestamp="1605964856596">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
@@ -133,5 +148,9 @@
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state width="1491" height="536" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1605964856596" />
+    <state x="68" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1606227752650">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="68" y="276" key="com.intellij.ide.util.TipDialog/0.40.1536.824@0.40.1536.824" timestamp="1606227752650" />
   </component>
 </project>
