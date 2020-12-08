@@ -87,6 +87,10 @@ public class CloudpaymentsFlutterPlugin : FlutterPlugin, MethodCallHandler, Acti
                 val argument = cardCryptogram(call)
                 result.success(argument)
             }
+            "googlePay" -> {
+                val argument = googlePay(call)
+                result.success(argument)
+            }
             "show3ds" -> {
                 show3ds(call, result)
             }
@@ -148,6 +152,41 @@ public class CloudpaymentsFlutterPlugin : FlutterPlugin, MethodCallHandler, Acti
         return mapOf("cryptogram" to cardCryptogram, "error" to error)
     }
 
+    private fun googlePay(call: MethodCall): Map<String, Any?> {
+        val params = call.arguments as Map<String, Any>
+        val publicId = params["publicId"] as String
+
+
+        var cardCryptogram: String? = null
+        var error: String? = null;
+
+        try {
+            //cardCryptogram = card.cardCryptogram(publicId)
+        } catch (e: UnsupportedEncodingException) {
+            e.printStackTrace()
+            error = "UnsupportedEncodingException"
+        } catch (e: NoSuchPaddingException) {
+            e.printStackTrace()
+            error = "NoSuchPaddingException"
+        } catch (e: NoSuchAlgorithmException) {
+            e.printStackTrace()
+            error = "NoSuchAlgorithmException"
+        } catch (e: BadPaddingException) {
+            e.printStackTrace()
+            error = "BadPaddingException"
+        } catch (e: IllegalBlockSizeException) {
+            e.printStackTrace()
+            error = "IllegalBlockSizeException"
+        } catch (e: InvalidKeyException) {
+            e.printStackTrace()
+            error = "InvalidKeyException"
+        } catch (e: StringIndexOutOfBoundsException) {
+            e.printStackTrace()
+            error = "StringIndexOutOfBoundsException"
+        }
+
+        return mapOf("cryptogram" to cardCryptogram, "error" to error)
+    }
     private fun show3ds(call: MethodCall, result: Result) {
         val params = call.arguments as Map<String, Any>
         val acsUrl = params["acsUrl"] as String

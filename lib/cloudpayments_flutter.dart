@@ -19,7 +19,14 @@ class CloudpaymentsFlutter {
     final valid = await _channel.invokeMethod<bool>('isValidExpireDate', {'expireDate': date});
     return valid;
   }
-
+  static Future<Cryptogram> googlePayCryptogram(
+      String publicId,
+      ) async {
+    final dynamic arguments = await _channel.invokeMethod<dynamic>('googlePay', {
+      'publicId': publicId,
+    });
+    return Cryptogram(arguments['cryptogram'], arguments['error']);
+  }
   static Future<Cryptogram> cardCryptogram(
       String cardNumber,
       String cardDate,
