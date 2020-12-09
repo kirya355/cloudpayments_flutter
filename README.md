@@ -21,6 +21,10 @@ See the official documentation:
 ## Getting Started
 
 ### Initializing for Android
+To Google Pay add in AndroidManifest.xml, tag <application>
+`<meta-data
+     android:name="com.google.android.gms.wallet.api.enabled"
+     android:value="true" />`
 
 If you want to show 3ds dialog on Android, make MainActivity implements `FlutterFragmentActivity` instead of `FlutterActivity`
 

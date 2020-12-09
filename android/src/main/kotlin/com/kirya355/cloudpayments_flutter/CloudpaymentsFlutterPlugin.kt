@@ -20,6 +20,14 @@ import java.security.NoSuchAlgorithmException
 import javax.crypto.BadPaddingException
 import javax.crypto.IllegalBlockSizeException
 import javax.crypto.NoSuchPaddingException
+import jdk.nashorn.internal.objects.NativeFunction.call
+import jdk.nashorn.internal.objects.NativeFunction.call
+
+
+
+
+
+
 
 /** CloudpaymentsFlutterPlugin */
 public class CloudpaymentsFlutterPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
@@ -156,12 +164,16 @@ public class CloudpaymentsFlutterPlugin : FlutterPlugin, MethodCallHandler, Acti
         val params = call.arguments as Map<String, Any>
         val publicId = params["publicId"] as String
 
-
-        var cardCryptogram: String? = null
         var error: String? = null;
 
         try {
-            //cardCryptogram = card.cardCryptogram(publicId)
+            val params: PaymentMethodTokenizationParameters = PaymentMethodTokenizationParameters.newBuilder()
+                    .setPaymentMethodTokenizationType(
+                            WalletConstants.PAYMENT_METHOD_TOKENIZATION_TYPE_PAYMENT_GATEWAY)
+                    .addParameter("gateway", "cloudpayments")
+                    .addParameter("gatewayMerchantId", publicId)
+                    .build()
+            val tokenGP: String = paymentData.getPaymentMethodToken().getToken()
         } catch (e: UnsupportedEncodingException) {
             e.printStackTrace()
             error = "UnsupportedEncodingException"
@@ -185,7 +197,7 @@ public class CloudpaymentsFlutterPlugin : FlutterPlugin, MethodCallHandler, Acti
             error = "StringIndexOutOfBoundsException"
         }
 
-        return mapOf("cryptogram" to cardCryptogram, "error" to error)
+        return mapOf("cryptogram" to tokenGP, "error" to error)
     }
     private fun show3ds(call: MethodCall, result: Result) {
         val params = call.arguments as Map<String, Any>
